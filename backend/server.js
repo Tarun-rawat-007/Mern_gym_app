@@ -13,9 +13,8 @@ connectDB();// database connection
 const app = express();
 
 
-app.use(
-  cors() // This will allow all origins by default
-);
+app.options('*', cors()); // Enable pre-flight across-the-board
+
 
 // ✅ Middleware to parse JSON requests
 app.use(express.json());
