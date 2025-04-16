@@ -12,7 +12,7 @@ connectDB();// database connection
 
 const app = express();
 
-// ✅ Enable CORS for frontend (http://localhost:5173)
+
 app.use(
   cors() // This will allow all origins by default
 );

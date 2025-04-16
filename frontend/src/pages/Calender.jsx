@@ -74,7 +74,7 @@ const Calendar = () => {
     const updated = [...new Set([...markedDates, selectedDay])].sort((a, b) => a - b);
     setMarkedDates(updated);
 
-    fetch('http://localhost:3000/api/user/save-workout', {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/save-workout`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -101,7 +101,7 @@ const Calendar = () => {
     const updated = markedDates.filter(d => d !== selectedDay);
     setMarkedDates(updated);
 
-    fetch('http://localhost:3000/api/user/unmark-workout', {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/unmark-workout`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
