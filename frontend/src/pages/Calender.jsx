@@ -16,7 +16,7 @@ const Calendar = () => {
     const email = localStorage.getItem('userEmail');
     if (email) {
       setUserEmail(email);
-      fetch(`http://localhost:3000/api/user/get-workouts/${email}`)
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/get-workouts/${email}`)
         .then(res => res.json())
         .then(data => {
           if (data?.workouts?.length > 0) {
