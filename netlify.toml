@@ -1,8 +1,6 @@
 [build]
-  # The directory where Netlify will look for the final build files
-  publish = "build"
-  # The command to run your build process
-  command = "npm run build"
+  publish = "build"  # The folder containing the built app
+  command = "npm run build"  # The build command
 
 [[redirects]]
   from = "/*"
