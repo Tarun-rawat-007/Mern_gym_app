@@ -1,8 +1,8 @@
 [build]
   # The directory where Netlify will look for the final build files
-  publish = "build"  # Change this to 'dist' if you're using another directory like in Vue.js or Angular
-  # The command to run your build process (the one that creates the 'build' directory)
-  command = "npm run build"  # Or 'yarn build' if you're using Yarn
+  publish = "build"
+  # The command to run your build process
+  command = "npm run build"
 
 [[redirects]]
   from = "/*"
