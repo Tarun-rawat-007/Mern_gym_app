@@ -14,11 +14,9 @@ const app = express();
 
 // ✅ Enable CORS for frontend (http://localhost:5173)
 app.use(
-    cors({
-      origin: process.env.FRONTEND_URL,
-      credentials: true, // Allow cookies if needed
-    })
-  );
+  cors() // This will allow all origins by default
+);
+
 // ✅ Middleware to parse JSON requests
 app.use(express.json());
 
