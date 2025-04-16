@@ -1,0 +1,21 @@
+# Root-level ignore
+.env
+node_modules/
+
+# Ignore node_modules and .env inside frontend and backend
+frontend/node_modules/
+frontend/.env
+
+backend/node_modules/
+backend/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build output
+frontend/build/

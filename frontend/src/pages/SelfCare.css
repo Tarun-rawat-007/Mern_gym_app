@@ -1,0 +1,190 @@
+/* Self-Care Section */
+.self-care-section {
+    background: #f8f9fa;
+    padding: 60px;
+    text-align: center;
+}
+
+.self-care-content h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.self-care-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.self-care-tips {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.self-care-item {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.self-care-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.self-care-item h3 {
+    font-size: 1.5em;
+    color: #242525;
+    margin-top: 10px;
+}
+
+.self-care-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .self-care-tips {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* Regular Check-Up Section */
+.checkup-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background: #f5f5f5;
+}
+
+.checkup-content {
+    width: 50%;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.checkup-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.checkup-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.checkup-content ul {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.checkup-content ul li {
+    font-size: 1.1em;
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.checkup-content ul li::before {
+    content: ">";
+    color: #79757e;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.checkup-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.checkup-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkup-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .checkup-content, .checkup-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .checkup-content {
+        margin-bottom: 20px;
+    }
+}
+/* Medical Hygiene Section */
+.hygiene-section {
+    background: #ffffff;
+    padding: 60px;
+    text-align: center;
+}
+
+.hygiene-content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hygiene-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hygiene-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hygiene-item {
+    text-align: center;
+    width: 220px;
+}
+
+.hygiene-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hygiene-item p {
+    font-size: 1.1em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hygiene-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

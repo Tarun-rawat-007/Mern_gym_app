@@ -1,0 +1,465 @@
+
+  
+  .tracker-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+    background-color: white;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .Gamefied-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #313030; /* Adjust color as needed */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    background: white;
+  }
+  
+  
+  .workout-section, .pie-chart-section {
+    width: 45%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .workout-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    margin-bottom: 10px;
+  }
+  
+  .start-button, .stop-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .start-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+ 
+  .pause-resume-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .pause-resume-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .timer {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    margin: 20px auto;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid black;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: rgb(42, 127, 238);
+    transition: width 0.3s;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid #61dafb;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  
+  .task-item.completed {
+    background-color: #80dbff;
+  }
+  
+  .task-checkbox {
+    transform: scale(1.8); /* Increase size */
+    margin-right: 10px;
+    appearance: none; /* Remove default checkbox styling */
+    width: 14px; /* Set custom width */
+    height: 14px; /* Set custom height */
+    border: 2px solid #80dbff; /* Border color */
+    border-radius: 50%; /* Make it rounded */
+    background-color: white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+/* Styling when checkbox is checked */
+.task-checkbox:checked {
+    background-color: #28a745; /* Fill color when checked */
+    border: 2px solid #1e7e34;
+}
+
+/* Adding a tick mark inside when checked */
+.task-checkbox:checked::after {
+    content: "✔";
+    font-size: 8px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  
+  /* Pie Chart Section */
+  .pie-chart-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .no-task-message {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+ 
+  }
+  
+  .calories-burned {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Popup Styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 80px;
+    border-radius: 20px;
+    text-align: center;
+    width: 700px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    border: 6px solid gold;
+  }
+  
+  .popup-title {
+    font-size: 38px;
+    color: gold;
+    margin-bottom: 20px;
+  }
+  .popup-rank {
+    font-size: 38px;
+    margin-bottom: 5px;
+
+  }
+  .popup-time, .popup-calories, .popup-completed {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .popup-completed {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .popup-close-button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 26px;
+    background-color: #e93030;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .tracker-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .workout-section, .pie-chart-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* FitQuest Dashboard Styles==================================================== */
+  .dashboard-container {
+    width: 90%;
+    margin: auto;
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 80px 0 30px;
+  }
+  
+  /* Flexbox for Layout */
+  .dashboard-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Stats Card */
+  .stats-card {
+    background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    color: #2d3436;
+    transition: transform 0.2s ease;
+    text-align: center;
+  }
+  
+  .stats-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stats-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1565c0;
+  }
+  
+  .stats-card p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #34495e;
+  }
+  
+  .rank-highlight,
+  .timer-highlight {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rank-highlight {
+    background-color: #d0f0fd;
+    color: #0b7285;
+  }
+  
+  .timer-highlight {
+    background-color: #edf6ff;
+    color: #1565c0;
+  }
+  
+  /* Table Container */
+  .table-container {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+    overflow-x: auto;
+    margin: auto;
+  }
+  
+  .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .dashboard-table th,
+  .dashboard-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .dashboard-table th {
+    background-color: #f0f4f8;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .dashboard-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .dashboard-table tr:hover {
+    background-color: #e0f7fa;
+    transition: background 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .dashboard-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stats-card {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    .dashboard-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .stats-card,
+    .table-container {
+      width: 100%;
+    }
+  
+    .dashboard-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .dashboard-table th,
+    .dashboard-table td {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-title {
+      font-size: 1.5rem;
+    }
+  
+    .stats-card {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    .dashboard-table th,
+    .dashboard-table td {
+      padding: 6px;
+      font-size: 0.8rem;
+    }
+  }
+  /* FitQuest.css */
+
+@media (max-width: 768px) {
+  .dashboard-table th:nth-child(3),
+  .dashboard-table td:nth-child(3),  /* Calories Burned */
+  .dashboard-table th:nth-child(4),
+  .dashboard-table td:nth-child(4) { /* Tasks Completed */
+    display: none;
+  }
+
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.rank-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.rank-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.rank-icon {
+  width: 2rem;
+  display: inline-block;
+}

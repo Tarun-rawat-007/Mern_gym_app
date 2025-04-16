@@ -1,0 +1,213 @@
+/* General container styling */
+.about-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 60px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Styling */
+.about-title {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #6a5acd;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* About section styling */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
+    padding: 50px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternate section direction */
+.about-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Text content */
+.text-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    color: #333;
+}
+
+/* Name Styling */
+.text-content h2 {
+    margin-bottom: 8px;
+    color: #222;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Role styling */
+.text-content .role {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6a5acd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Description text */
+.text-content p {
+    margin: 3px 0;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact & Basic Details */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.basic-details {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.contact-details {
+    text-align: right;
+    font-size: 1rem;
+}
+
+/* Icons */
+.contact-details i, .basic-details i {
+    color: #6a5acd;
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .about-section.reverse {
+        flex-direction: column;
+    }
+
+    .info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .basic-details,
+    .contact-details {
+        text-align: center;
+    }
+}
+/* Thank You Section */
+.thank-you-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Makes it responsive */
+    background-color: #f8f9fa;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* Text Content */
+.thank-you-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+}
+
+.thank-you-text h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.thank-you-text p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.thank-you-text h3 {
+    font-size: 22px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Image Styling */
+.thank-you-img {
+    flex: 1;
+    max-width: 40%;
+    min-width: 300px; /* Ensures it does not shrink too much */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .thank-you-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .thank-you-text {
+        max-width: 100%;
+    }
+
+    .thank-you-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .thank-you-text h2 {
+        font-size: 24px;
+    }
+
+    .thank-you-text p {
+        font-size: 16px;
+    }
+
+    .thank-you-text h3 {
+        font-size: 20px;
+    }
+
+    .thank-you-img {
+        max-width: 100%;
+    }
+}
