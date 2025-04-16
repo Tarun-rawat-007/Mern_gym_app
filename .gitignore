@@ -19,3 +19,7 @@ Thumbs.db
 
 # Build output
 frontend/build/
+
+
+# Vite build output
+frontend/dist
